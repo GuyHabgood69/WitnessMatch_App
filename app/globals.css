@@ -1,0 +1,69 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+
+  --color-neon: #D8FF5F;
+  --color-glass: rgba(255, 255, 255, 0.08);
+  --color-appbg: #F4F6F9;
+  --color-success: #16A34A;
+  --color-successbg: #DCFCE7;
+}
+
+@layer base {
+  body {
+    background-color: #032C26;
+    background-image:
+        radial-gradient(circle at -10% -10%, #294F4D 0%, transparent 60%),
+        radial-gradient(circle at 110% 20%, #8D84B2 0%, transparent 60%),
+        radial-gradient(circle at 40% -10%, rgba(216, 167, 177, 0.6) 0%, transparent 40%),
+        radial-gradient(circle at 10% 110%, #6389BA 0%, transparent 60%),
+        radial-gradient(circle at 90% 110%, #5E4E8D 0%, transparent 60%);
+    background-attachment: fixed;
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.2);
+  }
+
+  .timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    bottom: 0;
+    left: 5px;
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 0;
+  }
+  
+  .timeline-item:last-child .timeline-line-cover {
+    display: none;
+  }
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,0.3);
+}

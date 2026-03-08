@@ -1,0 +1,5 @@
+{
+  "name": "WitnessMatch Case Room",
+  "description": "A dashboard for clinical experts to review cases, chat with advisors, and log billable hours.",
+  "requestFramePermissions": []
+}
